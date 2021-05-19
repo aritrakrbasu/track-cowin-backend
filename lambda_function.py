@@ -5,7 +5,7 @@ from firebase_admin import firestore
 import requests
 from datetime import date
 import smtplib
-from email.mime.multipart import MIMEMultipart
+from email.mime.multipart import MIMEMultipart 
 from email.mime.text import MIMEText
 import os
 
