@@ -51,7 +51,7 @@ def sendEmail(user,availableCenters):
     html ="""
     <p><strong><span style="color: #e03e2d;">Note: This websites sends you an automated email whenever their is a availability of vaccine in your area . We use COWIN Api and is not atall an official website for covid vaccine registration . You can book your appointment for covid vaccine by registering at </span> <a href="https://www.cowin.gov.in/home" target="_blank" rel="noopener">COWIN</a></strong></p>
         <br>
-        <p><strong>If you want to stop getting notifications <a href="https://track-cowin.web.app/unsubscribe/${email}" target="_blank" rel="noopener">click here</a> . </strong></p>
+        <p><strong>If you want to stop getting notifications <a href='https://track-cowin.web.app/unsubscribe/'"""+user['email']+""" target="_blank" rel="noopener">click here</a> . </strong></p>
         <br><br>
         <Strong> Details of available centers </strong>
 
@@ -80,7 +80,7 @@ def sendEmail(user,availableCenters):
      <br><br>
         <p><strong><span style="color: #e03e2d;">Note: This websites sends you an automated email whenever their is a availability of vaccine in your area . We use COWIN Api and is not atall an official website for covid vaccine registration . You can book your appointment for covid vaccine by registering at </span> <a href="https://www.cowin.gov.in/home" target="_blank" rel="noopener">COWIN</a></strong></p>
         <br>
-        <p><strong>If you want to stop getting notifications <a href="https://track-cowin.web.app/unsubscribe/${email}" target="_blank" rel="noopener">click here</a> . </strong></p>
+        <p><strong>If you want to stop getting notifications <a href='https://track-cowin.web.app/unsubscribe/'"""+user['email']+""" target="_blank" rel="noopener">click here</a> . </strong></p>
     """
 
     msg = MIMEMultipart('alternative')
