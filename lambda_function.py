@@ -118,6 +118,17 @@ def lambda_handler(event,context):
                         for session in sessions:
                             if(session["available_capacity"] > 0):
                                 availableCenters.append(session)
+            else:
+                # get data pincodewise 
+                URL ="https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pincode="+str(user['pincode'])+"&date="+str(formateddate)
+                #requesting data
+                r = requests.get(URL,headers=headers)
+                if r.status_code == 200:
+                    sessions = r.json()["sessions"]
+                    if(len(sessions) > 0):
+                        for session in sessions:
+                            if(session["available_capacity"] > 0):
+                                availableCenters.append(session)
             if(len(availableCenters) > 0):
                 sendEmail(user,availableCenters)
 
