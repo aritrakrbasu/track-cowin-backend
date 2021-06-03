@@ -179,5 +179,3 @@ def lambda_handler(event,context):
         #                         availableCenters.append(session)
         #     if(len(availableCenters) > 0):
         #         sendEmail(user,availableCenters)
-
-lambda_handler("event","context")
