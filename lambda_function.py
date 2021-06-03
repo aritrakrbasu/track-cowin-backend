@@ -123,7 +123,7 @@ def lambda_handler(event,context):
                     userDetailsDistrict[user['district']] = []
                     userDetailsDistrict[user['district']].append(user)
 
-        for district in userDetailsDistrict:
+        for district in userDetailsDistrict: 
             availableCenters = list() 
             URL ="https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByDistrict?district_id="+str(district)+"&date="+str(formateddate)
                 #requesting data
